@@ -34,6 +34,7 @@ class Overlay extends React.Component {
       , placement
       , shouldUpdatePosition
       , rootClose
+      , flipOptions
       , children
       , transition: Transition
       , ...props } = this.props;
@@ -57,6 +58,7 @@ class Overlay extends React.Component {
         container={container}
         containerPadding={containerPadding}
         shouldUpdatePosition={shouldUpdatePosition}
+        flipOptions={flipOptions}
       >
         {child}
       </Position>

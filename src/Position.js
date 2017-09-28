@@ -191,6 +191,7 @@ class Position extends React.Component {
 
     const {
       placement, shouldUpdatePosition, container, containerPadding,
+      flipOptions
     } = this.props;
     const containerNode = getContainer(container, ownerDocument(this).body);
 
@@ -205,7 +206,7 @@ class Position extends React.Component {
             boundariesElement: containerNode,
             padding: containerPadding,
           },
-          flip: {
+          flip: flipOptions || {
             enabled: placement.indexOf('auto') === 0,
           },
           applyStyle: {
